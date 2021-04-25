@@ -5,7 +5,7 @@ Created on Sun Apr 25 15:12:50 2021
 @author: auliaf067684
 """
 
-from typing import Optional
+#from typing import Optional
 from fastapi import FastAPI
 import pandas as pd
 

@@ -56,9 +56,9 @@ def topkecamatan():
     ket = "Berikut daftar 3 kecamatan yang memiliki persentase memenuhi target peserta KB aktif paling tinggi"
     
     return{"Keterangan": ket,
-           "Pertama": [satu,psatu],
-           "Kedua": [dua,pdua],
-           "Ketiga": [tiga,ptiga]}
+           "Pertama": {satu:psatu},
+           "Kedua": {dua:pdua},
+           "Ketiga": {tiga:ptiga}}
 
 
 # Fourth Page: Hasil analisis berupa metode kontrasepsi yang paling banyak digunakan di kabupaten Bantul
@@ -87,5 +87,5 @@ def toplastmethode():
     ket = "Berikut metode yang paling banyak serta yang paling sedikit digunakan pada kabupaten Bantul"
     
     return{"Keterangan": ket,
-           "Terbanyak": [top,ptop],
-           "Tersedikit": [last,plast]}
+           "Terbanyak": {top:ptop},
+           "Tersedikit": {last:plast}}

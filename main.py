@@ -20,14 +20,14 @@ def read_root():
     return{"Belongs to": "Aulia Fitriyani(67684)", 
            "Data About":"Data peserta KB Aktif menurut metode kontrasepsi per kecamatan di Kabupaten Bantul (https://data.go.id/)", 
            "Main Page":"This is Main Page",
-           "Second Page": "/secondpage",
-           "Third Page": "/thirdpage",
-           "Fourth Page": "/fourthpage"}
+           "Persentase Pencapaian Target": "/target",
+           "Top Kecamatan": "/topkecamatan",
+           "Top & Last Metode": "/toplastmetode"}
 
 
-# Second Page: Hasil analisis mengenai keberhasilan memenuhi target peserta KB Aktif
-@app.get("/secondpage")
-def persentasekb():
+# Persentase Pencapaian Target: Hasil analisis mengenai keberhasilan memenuhi target peserta KB Aktif
+@app.get("/target")
+def persentasetarget():
     
     # Menjumlahkan semua data pada jumlah peserta dan target lalu dilakukan perhitungan untuk mendapatkan persentase
     peserta_kb = sum(data['jumlah_peserta_kb_aktif'])
@@ -40,8 +40,8 @@ def persentasekb():
            "Keterangan": ket}
 
 
-# Third Page: Hasil analisis berupa kecamatan pada Kabupaten Bantul yang paling tinggi persentasenya dalam memenuhi target
-@app.get("/thirdpage")
+# Top Kecamatan: Hasil analisis berupa kecamatan pada Kabupaten Bantul yang paling tinggi persentasenya dalam memenuhi target
+@app.get("/topkecamatan")
 def topkecamatan():
     
     # Mengurutkan data persentase per kecamatan yang sudah terdapat pada data
@@ -61,9 +61,9 @@ def topkecamatan():
            "Ketiga": {tiga:ptiga}}
 
 
-# Fourth Page: Hasil analisis berupa metode kontrasepsi yang paling banyak digunakan di kabupaten Bantul
-@app.get("/fourthpage")
-def toplastmethode():
+# Top & Last Metode: Hasil analisis berupa metode kontrasepsi yang paling banyak digunakan di kabupaten Bantul
+@app.get("/toplastmetode")
+def toplastmetode():
     
     # Membuat 2 list yang diperuntukkan bagi nama metode dan persentase penggunaannya di kabupaten Bantul
     metode = []

@@ -36,7 +36,9 @@ def persentasetarget():
     
     ket = "Jika target yang terpenuhi lebih dari 80%, dapat dikatakan bahwa hasil yang didapat pemerintah Bantul sudah cukup bagus mengenai pengguna KB Aktif di wilayahnya"
     
-    return{"Target yang Terpenuhi": persentase_target, 
+    return{"Peserta KB": peserta_kb,
+           "Target KB": target_kb,
+           "Target yang Terpenuhi": persentase_target, 
            "Keterangan": ket}
 
 
